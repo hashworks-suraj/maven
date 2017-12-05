@@ -11,12 +11,12 @@ pipeline {
       steps {
         sh 'mvn -B -DskipTests clean package'
         script {
-          def server = Artifactory.newServer url: 'artifactory:8081', username: 'admin', password: 'password'
+          def server = Artifactory.newServer url: 'http://artifactory:8081', username: 'admin', password: 'password'
           def uploadSpec = """{
             "files": [
               {
                 "pattern": "*.jar",
-                "target": "example-repo-local/maven-build"
+                "target": "example-repo-local/"
               }
             ]
           }"""
