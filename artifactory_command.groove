@@ -1,0 +1,10 @@
+def server = Artifactory.newServer url: 'http://artifactory:8081/artifactory', username: 'admin', password: 'password'
+def uploadSpec = """{
+  "files": [
+    {
+      "pattern": "*.jar",
+      "target": "generic-local/"
+    }
+ ]
+}"""
+server.upload(uploadSpec)
