@@ -16,7 +16,7 @@ pipeline {
             "files": [
               {
                 "pattern": "*.jar",
-                "target": "generic-local//maven/"
+                "target": "generic-local/"
               }
             ]
           }"""
