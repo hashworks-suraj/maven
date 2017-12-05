@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh 'mvn -B -DskipTests clean package'
         script {
-          def server = Artifactory.newServer url: '127.0.0.1:8081', username: 'admin', password: 'password'
+          def server = Artifactory.newServer url: 'artifactory:8081', username: 'admin', password: 'password'
           def uploadSpec = """{
             "files": [
               {
