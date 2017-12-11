@@ -42,7 +42,7 @@ pipeline {
               server.download(downloadSpec)
             }
             
-            sh 'java -cp files/my-app-1.0-SNAPSHOT.jar'
+            sh 'java -cp files/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App'
             sh 'mvn test'
           }
         }
