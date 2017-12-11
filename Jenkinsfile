@@ -30,7 +30,7 @@ pipeline {
         stage('fetch') {
           steps {
             script {
-              def server = Artifactory.newServer url: 'artifactory:8081/artifactory', username: 'admin', password: 'password'
+              def server = Artifactory.newServer url: 'http://artifactory:8081/artifactory', username: 'admin', password: 'password'
               def downloadSpec = """{
                 "files": [
                   {
