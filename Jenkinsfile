@@ -42,6 +42,8 @@ pipeline {
               server.download(downloadSpec)
             }
             
+            sh 'cd files/'
+            sh 'mvn test'
           }
         }
       }
