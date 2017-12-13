@@ -51,6 +51,7 @@ pipeline {
     stage('test') {
       steps {
         sh 'mvn test'
+        sh 'mvn surefire:test'
       }
       post {
         always {
